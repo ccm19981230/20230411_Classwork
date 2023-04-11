@@ -1,18 +1,384 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cards 3d - fullPage.js</title>
-    <meta name="author" content="Alvaro Trigo Lopez" />
-    <meta name="description" content="fullPage Cards 3d extension example." />
-    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,auto-height,full-screen" />
-    <meta name="Resource-type" content="Document" />
-    <meta http-equiv="refresh" content="0; url=http://alvarotrigo.com/fullPage/extensions/cards.html" />
-</head>
-<body>
-
-Redirecting...
-
-</body>
-</html>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],s=[],r=!0,a=function(e,i,n,o,s,r,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,c=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=s,this.deleteWhenComplete=r,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),c.isInitialized=!0,c.isComplete=!0,f("... func.apply: "+e);var i=c.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[c.funcName]),null!=n&&n.apply(null,this.parameters),!0===c.deleteWhenComplete&&delete t[e],!0===c.isBlock&&(f("----- F'D: "+c.name),u())}},l=function(e,i,t,n,o,s,r){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=s,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=r,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===s&&(t.defer=!0),t.onerror=function(){f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=r&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(s))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,r,a,c,h,f,u){var m=new l(e,i,n,r,a,c,h,u);!0===f?o[e]=m:s[e]=m,t[e]=m,d(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=n,t[e]=n,d(n)},addFunc:function(e,n,r,l,c,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var y=new a(e,n,r,l,c,f,u,p);!0===m?o[e]=y:s[e]=y,t[e]=y,d(y)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=o,t[e]=o,d(o)},items:t,processAll:u,setallowLoad:function(e){r=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+    catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+    function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+    remove_ama_config()})()</script>
+    <script data-ezscrex="false" data-cfasync="false">__ez.ssaf=[];__ez.sswp=4;__ez.ssv=267448;__ez.sshsdef=false;</script>
+    <script type="text/javascript">var ezoicTestActive = true</script>
+    <script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod81-c","ad_cache_level":2,"ad_count_adjustment":0,"ad_lazyload_version":5,"ad_load_version":1,"ad_location_ids":"","adx_ad_count":0,"bidder_method":1,"bidder_version":3,"city":"Central","country":"HK","days_since_last_visit":-1,"display_ad_count":0,"domain_id":322793,"domain_test_group":20230804,"ds_adsize_opt_id":-1,"engaged_time_visit":29,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":1,"last_page_load":"1681192415990","last_pageview_id":"83c0f9a9-1c21-4312-4b43-4a540b56aeff","lt_cache_level":0,"max_ads":0,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":6,"page_view_id":"5ecc78d9-9978-436b-5330-4f6a95dedcb8","position_selection_id":46,"postal_code":"","pv_event_count":0,"response_size_orig":33326,"response_time_orig":4,"serverid":"i-0f18aebb6b5cc27cc","state":"HCW","sub_page_ad_positions":"","t_epoch":1681192431,"template_id":147,"time_on_site_visit":774,"url":"https://alvarotrigo.com/fullPage/extensions/cards.html","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":96,"worst_bad_word_level":0};var _ezim_d = {};var _ezat = {"domain_id":322793,"form_factor_id":1,"framework_id":1,"pageview_date":"2023-04-11","pageview_id":"5ecc78d9-9978-436b-5330-4f6a95dedcb8","template_id":147,"url":"https://alvarotrigo.com/fullPage/extensions/cards.html","visit_uuid":"ee318c72-088e-43df-6d0f-fe0af345a98e"};</script><script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=195-0&bv=212&v=74&PageSpeed=off', true, [], true, false, false, true);</script>
+    <script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script>
+        
+        <title>fullPage.js - Cards 3d Extension</title>
+        <meta name="author" content="Alvaro Trigo Lopez"/>
+        <meta name="description" content="Cards 3d scrolling effect for fullPage.js library"/>
+        <meta name="keywords" content="fullpage,extension,addon,plugin,parallax,parallax scrolling, parallax snapping,scrollbar, parallax backgrounds, parallax images"/>
+        <meta name="Resource-type" content="Document"/>
+    
+        <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/fullpage.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/examples/examples.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" rel="stylesheet"/>
+    
+        <meta property="og:title" content="New parallax effect!"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="New Cards 3d scrolling effect! Check it out!"/>
+        <meta property="og:image" content="http://alvarotrigo.com/fullPage/extensions/imgs/promo/parallax.png"/>
+        <meta property="og:url" content="http://alvarotrigo.com/fullPage/extensions/parallax.html"/>
+        <meta name="twitter:card" content="photo"/>
+        <meta name="twitter:site" content="@imac2"/>
+        <meta name="twitter:creator" content="@imac2"/>
+        <meta name="twitter:title" content="New Cards 3d scrolling effect!"/>
+        <meta name="twitter:description" content="New Cards 3d scrolling effect for fullPage.js! Check it out!"/>
+        <meta name="twitter:image" content="http://alvarotrigo.com/fullPage/extensions/imgs/promo/cards-3d.png"/>
+        <meta name="twitter:url" content="http://alvarotrigo.com/fullPage/extensions/parallax.html"/>
+    
+        <!--[if IE]>
+            <script type="text/javascript">
+                 var console = { log: function() {} };
+            </script>
+        <![endif]-->
+    
+        <style type="text/css">@keyframes hideTextLeft{0%{transform:translate3d(0,0,0);opacity:1}to{transform:translate3d(calc(-100% - 551px),0,0);opacity:1}}@keyframes hideTextToRight{0%{transform:translate3d(0,0,0);opacity:1}to{transform:translate3d(100%,0,0);opacity:1}}@keyframes revealTextFromRight{0%{transform:translate3d(100%,0,0);opacity:0}to{transform:translate3d(0,0,0);opacity:1}}@keyframes revealTextFromLeft{0%{transform:translate3d(calc(-100% - 551px),0,0);opacity:0}to{transform:translate3d(0,0,0);opacity:1}}@keyframes revealText{0%{transform:translate3d(0,125%,0);opacity:0}to{transform:translate3d(0,0%,0);opacity:1}}@keyframes hideText{0%{transform:translate3d(0,0%,0);opacity:1}to{transform:translate3d(0,125%,0);opacity:1}}@keyframes bounce{0%,20%,60%,80%,to{transform:translateY(0)}40%{transform:translateY(-10px)}50%{transform:translateY(5px)}}@keyframes floating{0%,to{transform:translate(0%,-50%)}25%{transform:translate(5px,calc(-50% + 15px))}50%{transform:translate(10px,calc(-50% + 5px))}75%{transform:translate(0%,calc(-50% + 15px))}}@keyframes rubberBand{0%,to{-webkit-transform:scaleX(1);transform:scaleX(1)}3%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}20%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}40%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}55%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}}@keyframes heartbeat{50%{transform:scale(1.1)}}@keyframes rainbow{0%{background:#1abc9c}10%{background:#2ecc71}20%{background:#3498db}30%,80%{background:#9b59b6}40%{background:#e74c3c}50%{background:#e67e22}60%{background:#f1c40f}70%{background:#2c3e50}}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body,h1{color:#000}body{background:#000}h1{font-weight:900;font-size:8em}.intro p,h1{font-family:'Source Sans Pro',sans-serif}p.intro-line{border-bottom:4px;background:#000;width:177px;height:4px}.intro-line-wrapper{margin-bottom:40px}#section1 .fp-bg,.fp-section{background-size:cover;background-position:50% 100%}#section1{position:relative}.fp-section:before,.fp-slide:before{content:"";display:block;position:absolute;z-index:-2;left:0;right:0;bottom:0;background:#fff;height:100%}#section1 h1{font-size:12em}#section1 h2{font-size:2.2em}#section1 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/vectors1.svg)}.arrow-down{position:fixed;bottom:23px;left:0;right:0;margin:0 auto;width:24px;height:20px;cursor:pointer;animation:bounce 3s infinite;transition:opacity 1.3s ease;opacity:1}.fp-viewing-3rdPage .arrow-down{opacity:0}.documentation{margin:17px 0 0;display:block;color:#245deb}.button-download{background:#245deb;margin-top:15px;color:#fff;border-width:0;border-radius:50px;padding:.8rem 2rem;font:18px "Margarine",sans-serif;outline:0;cursor:pointer;position:relative;transition:.2s ease-in-out;letter-spacing:2px;display:inline-block}.button-download:hover{animation:rainbow 3s infinite,heartbeat .6s infinite}#slide2-1 .fp-bg,#slide2-2 .fp-bg,#slide2-3 .fp-bg{background-position:89% 50%;background-size:52%;background-repeat:no-repeat}.loadBg #slide2-1 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/vectors-2-1.svg)}#slide2-2 .fp-bg,#slide2-3 .fp-bg{background-size:42%}.loadBg #slide2-2 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/vectors-2-2.svg)}.loadBg #slide2-3 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/vectors-2-3.svg)}#section2 .fp-slide{text-align:left;position:relative}.fp-slidesNav.fp-bottom{bottom:60px}#section2 .fp-tableCell{vertical-align:top}#section2 .fp-content{margin:0 auto;display:inline-block;width:auto;padding:0 0 0 10%;position:absolute;top:50%;transform:translateY(-50%)}#section2 .intro p{margin-left:0;width:100%}.section2-img,.slide2-2-img,.slide2-3-img{max-width:900px;max-height:683px;position:absolute;top:50%;right:0;bottom:0;transform:translate3d(15%,calc(-100% - 700px),0);transition:transform 1000ms cubic-bezier(.52,.01,.16,1) 100ms}.loadBg .section2-img{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-img.png)}.slide2-2-img,.slide2-3-img{max-height:516px}.loadBg .slide2-2-img{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-2-img.png)}.loadBg .slide2-3-img{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-3-img.png)}.trainers{width:59%;height:100%;background-size:contain}.trainers.animate{transform:translate3d(0,-50%,0);transition:transform 1000ms cubic-bezier(.52,.01,.16,1) 1000ms}.trainers.hide-right{transform:translate3d(calc(-150% - 900px),-50%,0);transition:transform 1000ms cubic-bezier(.52,.01,.16,1) 100ms}.trainers.hide-left{transform:translate3d(100%,-50%,0)}.trainers.hide-down,.trainers.hide-left,.trainers.hide-up{transition:transform 1000ms cubic-bezier(.52,.01,.16,1) 100ms}.trainers.hide-up{transform:translate3d(0,150%,0)}.trainers.hide-down{transform:translate3d(0,calc(-150% - 900px),0)}.trainers.animate2{animation-name:floating;animation-delay:1600ms;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-duration:3s}#section3 .fp-bg,.trainers{background-position:50%;background-repeat:no-repeat}body:not(.d-bg) #section3 .fp-bg{background-size:contain;background-origin:content-box;padding:3%}.loadBg #section3 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/vectors-333.svg)}#section3 .fp-content.section3-text{padding:0 10%}.anim-wrapper{overflow:hidden;position:relative}.anim-wrapper span{display:block}.fp-moving-vertically .fp-section.active .anim-wrapper p,.fp-moving-vertically .fp-section.active .anim-wrapper span{animation-timing-function:cubic-bezier(.52,.01,.16,1);animation-name:revealText;animation-duration:1550ms;animation-fill-mode:forwards;animation-delay:500ms;opacity:0}.fp-moving-vertically .fp-section:not(.active) .anim-wrapper p,.fp-moving-vertically .fp-section:not(.active) .anim-wrapper span{animation-name:hideText;animation-duration:1550ms;animation-delay:0ms;opacity:1}.fp-section.active .fp-slide .anim-wrapper p,.fp-section.active .fp-slide .anim-wrapper span{animation-timing-function:cubic-bezier(.52,.01,.16,1);animation-name:revealText;animation-duration:1550ms;animation-fill-mode:forwards}.fp-section.active .fp-slide.active .anim-wrapper p,.fp-section.active .fp-slide.active .anim-wrapper span{animation-delay:500ms}.fp-moving-right .fp-section.active .fp-slide.active .anim-wrapper p,.fp-moving-right .fp-section.active .fp-slide.active .anim-wrapper span{animation-name:revealTextFromRight;opacity:0}.fp-moving-left .fp-section.active .fp-slide.active .anim-wrapper p,.fp-moving-left .fp-section.active .fp-slide.active .anim-wrapper span{animation-name:revealTextFromLeft;opacity:0}.fp-moving-right .fp-section.active .fp-slide .anim-wrapper p,.fp-moving-right .fp-section.active .fp-slide .anim-wrapper span{animation-name:hideTextLeft;opacity:1}.fp-moving-left .fp-section.active .fp-slide .anim-wrapper p,.fp-moving-left .fp-section.active .fp-slide .anim-wrapper span{animation-name:hideTextToRight;opacity:1}.anim-delay-1{transition-delay:110ms}.anim-delay-2{transition-delay:210ms}.anim-delay-3{transition-delay:310ms}.anim-delay-4{transition-delay:410ms}.anim-delay-5{transition-delay:510ms}.anim-delay-6{transition-delay:610ms}.anim-delay-7{transition-delay:710ms}.anim-delay-8{transition-delay:810ms}.anim-delay-9{transition-delay:910ms}.anim-delay-10{transition-delay:1010ms}#settings,.settings-actions{position:fixed;left:20px;z-index:999}#settings{background:rgba(0,0,0,.3);height:43px;cursor:pointer;text-align:center;bottom:20px;border-radius:50%;width:43px}#settings:hover{animation:.5s rubberBand}#settings svg{width:27px;vertical-align:middle;fill:rgba(255,255,255,.7)}#settings:hover svg{fill:#fff}#settings span{line-height:42px;vertical-align:middle}.settings-actions{visibility:hidden;bottom:82px;background:#000;border-radius:4px;color:#fff;padding:10px 20px;font-size:13px;opacity:0;transform:scale(.9);transition:opacity 350ms,transform 350ms;transform-origin:50% 100%;width:185px}.settings-actions.active{opacity:1;transform:scale(1);visibility:visible}.settings-header{border-bottom:1px solid rgba(255,255,255,.13);padding:16px 0;margin:0 0 16px}.settings-header h6{font-size:18px;color:#fff;font-weight:700;margin:0 0 10px}.settings-header p{font-size:13px}.settings-actions-toggle li{background:rgba(255,255,255,.6);padding:7px 12px;margin:2px;color:#000;display:inline-block;cursor:pointer}.settings-actions-toggle .active,.settings-actions-toggle li:hover{color:#fff;background:#3cc63b}.actions-option{margin:0 0 15px;position:relative}.actions-option:last-child{margin:0}.preview-extensions-menu{box-shadow:none;top:11px;transform:translate3d(0,-100px,0);transition:transform 500ms ease-in-out 500ms}.preview-extensions-menu.active{transform:translate3d(0,0,0)}.preview-extensions-menu li{margin:0 10px 0 0;border-radius:4px}#menu li.active a:hover,#menu li:hover a,.preview-more-extensions a{color:#fff}.preview-more-extensions{background:#4884ff}#menu{width:auto}#menu li{background:#efefef;border-radius:4px}#menu li:hover{background:rgba(0,0,0,.5)}[type=range]{margin:0;padding:0;width:100%;height:1.5em;background:0 0;font:1em/1 arial,sans-serif}[type=range],[type=range]::-webkit-slider-thumb{-webkit-appearance:none}[type=range]::-webkit-slider-runnable-track{box-sizing:border-box;border:0;width:12.5em;height:.25em;background:#ccc}[type=range]::-moz-range-track{box-sizing:border-box;border:0;width:12.5em;height:.25em;background:#ccc}[type=range]::-ms-track{box-sizing:border-box;border:0;width:12.5em;height:.25em;background:#ccc}[type=range]::-webkit-slider-thumb{margin-top:-.625em;box-sizing:border-box;border:0;width:1.5em;height:1.5em;border-radius:50%;background:#3cc63b}[type=range]::-moz-range-thumb{box-sizing:border-box;border:0;width:1.5em;height:1.5em;border-radius:50%;background:#3cc63b}[type=range]::-ms-thumb{margin-top:0;box-sizing:border-box;border:0;width:1.5em;height:1.5em;border-radius:50%;background:#3cc63b}[type=range]::-ms-tooltip{display:none}[for=toggleFading]{margin:9px 0}.toggle{position:absolute;width:0;height:0;margin:0;padding:0;opacity:0;-ms-appearance:none;-moz-appearance:none;-webkit-appearance:none;appearance:none;border:0}.toggle,.toggle *,.toggle :after,.toggle :before,.toggle+.toggle-button,.toggle:after,.toggle:before{box-sizing:border-box}.toggle ::-moz-selection,.toggle :after::-moz-selection,.toggle :before::-moz-selection,.toggle+.toggle-button::-moz-selection,.toggle::-moz-selection,.toggle:after::-moz-selection,.toggle:before::-moz-selection{background:0 0}.toggle ::selection,.toggle :after::selection,.toggle :before::selection,.toggle+.toggle-button::selection,.toggle::selection,.toggle:after::selection,.toggle:before::selection{background:0 0}.toggle+.toggle-button{outline:0;display:block;width:3.2em;height:1.5em;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:rgba(140,150,169,.5);border-radius:2em;padding:0;-webkit-transition:all .4s ease;transition:all .4s ease}.toggle+.toggle-button:after{display:block}.toggle+.toggle-button:after,.toggle+.toggle-button:before{position:relative;content:"";width:1.8em;height:1.8em;top:-.1em}.toggle+.toggle-button:after{left:-10%;border-radius:50%;background:#fff;background:#888;-webkit-transition:all .2s ease;transition:all .2s ease}.d-colors .fp-bg,.toggle+.toggle-button:before{display:none}.toggle:checked+.toggle-button:after{left:60%;background-color:#3cc63b}.toggle-light:checked+.toggle-button{background:#3cc63b;background:rgba(60,198,59,.5)}#examples{position:absolute;top:16px;left:0;right:0;z-index:69;text-align:center}#examples li{color:#444;display:inline-block;margin:0 20px 0 0;cursor:pointer;position:relative;overflow:hidden;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);padding-bottom:7px}#examples li.active{color:#245deb;cursor:auto;right:0}#examples li:before{content:"";position:absolute;z-index:-1;left:0;right:100%;bottom:0;background:#245deb;height:2px;-webkit-transition-property:right;transition-property:right;-webkit-transition-duration:.4s;transition-duration:.4s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}#examples li.active:before,#examples li:active:before,#examples li:focus:before,#examples li:hover:before{right:0}.d-colors #section1:before{background-color:#ffd65d!important}.d-colors #section2:before,.d-colors #slide2-1:before{background-color:#4ec4ff!important}.d-colors #slide2-2:before{background-color:#ff4e96!important}.d-colors #slide2-3:before{background-color:#44ffb3!important}.d-colors #section3:before{background-color:#ffacf0!important}.d-colors #examples li{color:#000}.d-bg #examples li.active,.d-colors #examples li.active{font-weight:700}.d-colors #examples li:before{background:#000}.d-bg .fp-bg{background-size:cover!important}.d-bg #section3 .intro p{text-shadow:-1px 1px 8px rgba(0,0,0,.8)}.d-bg #section1 .fp-bg:before,.d-bg .trainers,.mobile-only{display:none}.d-bg #examples li,.d-bg .intro p,.d-bg h1{color:#fff}.d-bg #examples li:before,.d-bg #fp-nav ul li a span,.d-bg .fp-slidesNav ul li a span,.d-bg p.intro-line{background:#fff}.d-bg h2{color:rgba(255,255,255,.7)}.d-bg .slider-control{border:1px solid rgba(255,255,255,.5);color:#fff}.d-bg .slider-control:hover:after,.d-bg .slider-control:not(.disabled):after{background-color:#fff}.d-bg .slider-control.disabled{border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.3)}.d-bg .slider-control.disabled:after{background-color:rgba(255,255,255,.3)}.d-bg #section1:before{background-color:#162d43!important}.d-bg #section2:before,.d-bg #slide2-1:before{background-color:#66995e!important}.d-bg #slide2-2:before{background-color:#a3a3a3!important}.d-bg #slide2-3:before{background-color:#0c798e!important}.d-bg #section3:before{background-color:#830619!important}.d-bg #section3 .fp-bg:before{background:rgba(0,0,0,.35)}.d-bg #section1 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section-1.jpeg)}.d-bg #slide2-1 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-1.jpg)}.d-bg #slide2-2 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-2.jpeg)}.d-bg #slide2-3 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section2-3.jpg)}.d-bg #section3 .fp-bg{background-image:url(https://alvarotrigo.com/fullPage/extensions/imgs/cards/section3.jpg)}.d-bg.fp-viewing-3rdPage .settings-actions,.d-bg.fp-viewing-firstPage .settings-actions{background:rgba(255,255,255,.15)}.fp-controlArrow.fp-next{right:55px}.fp-controlArrow.fp-prev{left:55px}.slider-control{width:44px;height:44px;display:inline-block;text-align:center;border-radius:50%;margin:7px;border:1px solid rgba(0,0,0,.4);line-height:44px;color:#000;font-size:.84em;font-family:"courier new";position:relative}.slider-control span{position:absolute;width:100%;text-align:center;top:0;left:0}.slider-control:not(.disabled):hover span{transform:translateX(-5px)}.slider-control-next:not(.disabled):hover span{transform:translateX(5px)}.slider-control span,.slider-control:not(.disabled):after{transition:transform .25s cubic-bezier(.4,0,.2,1)}.slider-control:not(.disabled):after{display:block;content:'';background-color:#000;height:1px;width:14px;position:absolute;top:50%;left:auto;right:14px;transform:scaleX(0) translateX(0)}.slider-control:hover:after{transform:scaleX(1) translateX(0)}.slider-control.disabled{border:1px solid rgba(0,0,0,.15);color:rgba(0,0,0,.15)}.slider-control.disabled:after{background-color:rgba(0,0,0,.15)}@media screen and (max-width:1135px){body{font-size:.9em}}@media screen and (max-width:1050px){.fp-tableCell{font-size:.85em}}@media screen and (max-width:850px){.trainers{display:none}.fp-content{width:100%!important;text-align:center;padding:0 10%!important;display:-webkit-box!important;display:-moz-box!important;display:-ms-flexbox!important;display:-webkit-flex!important;display:flex!important;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}#section2 .intro,#section2 h1{margin:0 auto;-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:2;-webkit-order:2;order:2}#section2 h1{-webkit-box-ordinal-group:1;-moz-box-ordinal-group:1;-ms-flex-order:1;-webkit-order:1;order:1}.intro-line{display:none}.intro p{width:218px}}@media screen and (max-width:700px){.fp-tableCell{font-size:.8em}}@media screen and (max-width:630px){h1{font-size:6.5em}}@media screen and (max-width:550px){#section-1 h1{font-size:6em}h1{font-size:5em}}@media screen and (max-width:380px){h1{font-size:3.5em}}</style>
+        
+    <style id='ezoicCSS'>.ezoic-ad{display:inline-block;border:0px;}.ezoic-ad>div>iframe{margin:0px!important;padding:0px!important;}
+    .ezoic-floating-bottom { display: none!important; }
+    .ez-sidebar-wall {display: none;}</style><link rel='canonical' href='https://alvarotrigo.com/fullPage/extensions/cards.html' />
+    <script type="text/javascript">var ezouid = "1";</script><base href="https://alvarotrigo.com/fullPage/extensions/cards.html"><script type='text/javascript'>
+    var ezoTemplate = 'pub_site_noads';
+    if(typeof ezouid == 'undefined')
+    {
+        var ezouid = 'none';
+    }
+    var ezoFormfactor = '1';
+    var ezo_elements_to_check = Array();
+    </script><!-- START EZHEAD -->
+    <script data-ezscrex="false" type='text/javascript'>
+    var soc_app_id = '0';
+    var did = 322793;
+    var ezdomain = 'alvarotrigo.com';
+    var ezoicSearchable = 1;
+    </script>
+    <!--{jquery}-->
+    <!-- END EZHEAD -->
+    <script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+    function create_ezolpl(pvID, rv) {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        __ez.ck.setByCat("ezux_lpl_322793=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+    }
+    function attach_ezolpl(pvID, rv) {
+        if (document.readyState === "complete") {
+            create_ezolpl(pvID, rv);
+        }
+        if(window.attachEvent) {
+            window.attachEvent("onload", create_ezolpl, pvID, rv);
+        } else {
+            if(window.onload) {
+                var curronload = window.onload;
+                var newonload = function(evt) {
+                    curronload(evt);
+                    create_ezolpl(pvID, rv);
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = create_ezolpl.bind(null, pvID, rv);
+            }
+        }
+    }
+    
+    __ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["5ecc78d9-9978-436b-5330-4f6a95dedcb8", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+    </script>
+    <script type="text/javascript">var _audins_dom="alvarotrigo_com",_audins_did=322793;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-0&cb=04-3y02-8y06-13y07-2y1d-7y0b-6y0d-23y17-4y1b-5y20-4y25-3y33-4y5f-2&cmbcb=134&sj=x04x02x06x07x1dx0bx0dx17x1bx20x25x33x5f', true, [], true, false, true, false);</script>
+    <script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-0&cb=03-8y0c-6y1c-5&cmbcb=134&sj=x03x0cx1c', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head>
+    <body>
+    
+    <ul id="examples">
+        <li class="active" data-type="default">A</li>
+        <li data-type="colors">B</li>
+        <li data-type="backgrounds"></li>
+    </ul>
+    
+    <ul id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+    </ul>
+    
+    <ul class="preview-extensions-menu">
+        <li class="preview-more-extensions"><a href="https://alvarotrigo.com/fullPage/extensions/">More extensions</a></li><!--
+        --><li class="preview-buy-extension"><a href="https://gum.co/fullpageCards">Download extension</a></li>
+    </ul>
+    
+    <div id="settings">
+        <span>
+             <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 268.765 268.765" style="enable-background:new 0 0 268.765 268.765;" xml:space="preserve">
+                <g>
+                <g>
+                <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M267.92,119.461c-0.425-3.778-4.83-6.617-8.639-6.617
+                    c-12.315,0-23.243-7.231-27.826-18.414c-4.682-11.454-1.663-24.812,7.515-33.231c2.889-2.641,3.24-7.062,0.817-10.133
+                    c-6.303-8.004-13.467-15.234-21.289-21.5c-3.063-2.458-7.557-2.116-10.213,0.825c-8.01,8.871-22.398,12.168-33.516,7.529
+                    c-11.57-4.867-18.866-16.591-18.152-29.176c0.235-3.953-2.654-7.39-6.595-7.849c-10.038-1.161-20.164-1.197-30.232-0.08
+                    c-3.896,0.43-6.785,3.786-6.654,7.689c0.438,12.461-6.946,23.98-18.401,28.672c-10.985,4.487-25.272,1.218-33.266-7.574
+                    c-2.642-2.896-7.063-3.252-10.141-0.853c-8.054,6.319-15.379,13.555-21.74,21.493c-2.481,3.086-2.116,7.559,0.802,10.214
+                    c9.353,8.47,12.373,21.944,7.514,33.53c-4.639,11.046-16.109,18.165-29.24,18.165c-4.261-0.137-7.296,2.723-7.762,6.597
+                    c-1.182,10.096-1.196,20.383-0.058,30.561c0.422,3.794,4.961,6.608,8.812,6.608c11.702-0.299,22.937,6.946,27.65,18.415
+                    c4.698,11.454,1.678,24.804-7.514,33.23c-2.875,2.641-3.24,7.055-0.817,10.126c6.244,7.953,13.409,15.19,21.259,21.508
+                    c3.079,2.481,7.559,2.131,10.228-0.81c8.04-8.893,22.427-12.184,33.501-7.536c11.599,4.852,18.895,16.575,18.181,29.167
+                    c-0.233,3.955,2.67,7.398,6.595,7.85c5.135,0.599,10.301,0.898,15.481,0.898c4.917,0,9.835-0.27,14.752-0.817
+                    c3.897-0.43,6.784-3.786,6.653-7.696c-0.451-12.454,6.946-23.973,18.386-28.657c11.059-4.517,25.286-1.211,33.281,7.572
+                    c2.657,2.89,7.047,3.239,10.142,0.848c8.039-6.304,15.349-13.534,21.74-21.494c2.48-3.079,2.13-7.559-0.803-10.213
+                    c-9.353-8.47-12.388-21.946-7.529-33.524c4.568-10.899,15.612-18.217,27.491-18.217l1.662,0.043
+                    c3.853,0.313,7.398-2.655,7.865-6.588C269.044,139.917,269.058,129.639,267.92,119.461z M134.595,179.491
+                    c-24.718,0-44.824-20.106-44.824-44.824c0-24.717,20.106-44.824,44.824-44.824c24.717,0,44.823,20.107,44.823,44.824
+                    C179.418,159.385,159.312,179.491,134.595,179.491z"></path>
+                </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+            </svg>
+        </span>
+    </div>
+    <ul class="settings-actions">
+        <div class="settings-header">
+            <h6>Settings</h6>
+            <p>Here you can define the extension settings</p>
+        </div>
+    
+        <div class="actions-option">
+            <ul class="settings-actions-toggle">
+                <li id="turnOn" class="active">On</li>
+                <li id="turnOff">Off</li>
+            </ul>
+        </div>
+        <div class="actions-option only-if-active">
+            Cards perspective: <span class="perspective-value">100</span>
+            <input data-option="perspective" type="range" value="100" min="5" max="200"/>
+        </div>
+    
+         <div class="actions-option only-if-active">
+            Fade Content
+            <input id="toggleFading" data-option="fadeContent" type="checkbox" class="toggle toggle-light" checked=""/>
+            <label for="toggleFading" class="toggle-button"></label>
+        </div>
+    
+        <div class="actions-option only-if-active">
+            Fade Background
+            <input id="toggleFadeBackground" data-option="fadeBackground" type="checkbox" class="toggle toggle-light" checked=""/>
+            <label for="toggleFadeBackground" class="toggle-button"></label>
+        </div>
+    </ul>
+    
+    <div id="fullpage">
+        <div class="section" id="section1">
+            <div class="fp-bg">
+            </div>
+            <div class="fp-content">
+                <h1 class="anim-wrapper"><span>CARDS</span></h1>
+                <h2 class="anim-wrapper anim-delay-8"><span>A unique effect for your site</span></h2>
+    
+                <div class="button-rainbow">
+                    <a class="button-download" href="https://gum.co/fullpageCards">
+                        I want it!
+                        <div class="rainbow"></div>
+                    </a>
+                </div>
+                <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Extension-Cards" class="documentation">Documentation</a>
+               
+            </div>
+           
+        </div>
+    
+        <div class="section" id="section2">
+            <div class="slide" id="slide2-1">
+                <div class="fp-bg"></div>
+                <div class="fp-content">
+                    <div class="intro-line-wrapper anim-wrapper anim-delay-8">
+                        <p class="intro-line"></p>
+                    </div>
+    
+                    <div class="intro anim-wrapper anim-delay-8">
+                        <p>Use the wow factor to impress your visitors!</p>
+                    </div>
+                    <h1 class="anim-wrapper"><span>Wow!</span></h1>
+    
+                    <div class="slider-controls">
+                        <a class="slider-control slider-control-prev disabled" href="#">
+                            <span> &lt; </span>
+                        </a>
+                        <a class="slider-control slider-control-next" href="#">
+                            <span> &gt; </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section2-img trainers mobile-only"></div>
+            </div>
+    
+            <div class="slide" id="slide2-2">
+                <div class="fp-bg"></div>
+                <div class="fp-content">
+                    <div class="intro-line-wrapper anim-wrapper anim-delay-8">
+                        <p class="intro-line"></p>
+                    </div>
+    
+                    <div class="intro anim-wrapper anim-delay-8">
+                        <p>So easy that it is even scary!</p>
+                    </div>
+                    <h1 class="anim-wrapper"><span>Easy!</span></h1>
+    
+                    <div class="slider-controls">
+                        <a class="slider-control slider-control-prev" href="#">
+                            <span> &lt; </span>
+                        </a>
+                        <a class="slider-control slider-control-next" href="#">
+                            <span> &gt; </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slide2-2-img trainers mobile-only"></div>
+            </div>
+    
+            <div class="slide" id="slide2-3">
+                <div class="fp-bg"></div>
+                <div class="fp-content">
+                    <div class="intro-line-wrapper anim-wrapper anim-delay-8">
+                        <p class="intro-line"></p>
+                    </div>
+    
+                    <div class="intro anim-wrapper anim-delay-8">
+                        <p>fullPage.js is used by the biggest</p>
+                        <p>companies in the planet.</p>
+                    </div>
+                    <h1 class="anim-wrapper"><span>Trusted</span></h1>
+    
+                    <div class="slider-controls">
+                        <a class="slider-control slider-control-prev" href="#">
+                            <span> &lt; </span>
+                        </a>
+                        <a class="slider-control slider-control-next disabled" href="#">
+                            <span> &gt; </span>
+                        </a>
+                    </div>
+               </div>
+                <div class="slide2-3-img trainers mobile-only"></div>
+            </div>
+        </div>
+    
+        <div class="section" id="section3">
+            <div class="fp-bg"></div>
+            <div class="fp-content section3-text">
+                <h1 class="anim-wrapper"><span>Responsive</span></h1>
+                <div class="intro anim-wrapper anim-delay-8">
+                    <p>Turn it off whenever you need.</p>
+                    <p>Make use of fullPage.js responsive options.</p>
+                </div>
+           </div>
+        </div>
+    </div>
+    
+    <div class="section2-img trainers" data-section="2" data-slide="1" data-animate="section2"></div>
+    <div class="slide2-2-img trainers hide-left" data-section="2" data-slide="2" data-animate="slide2-2"></div>
+    <div class="slide2-3-img trainers hide-left" data-section="2" data-slide="3" data-animate="slide2-3"></div>
+    
+    
+    <svg class="arrow-down">
+        <path d="M12 18c-.2 0-.5-.1-.7-.3l-11-10c-.4-.4-.4-1-.1-1.4.4-.4 1-.4 1.4-.1l10.4 9.4 10.3-9.4c.4-.4 1-.3 1.4.1.4.4.3 1-.1 1.4l-11 10c-.1.2-.4.3-.6.3z"></path>
+    </svg>
+    
+    <input type="hidden" id="_4" value="3"/>
+    
+    <!-- WARNING!! -->
+    <!-- This file is limited. You can't use it to test the extension! It won't work. -->
+    <!-- You have to purchase it to try it as detailed in the FAQs:  -->
+    <!-- https://alvarotrigo.com/fullPage/extensions/faqs.html-->
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.cards.limited.min.js"></script>
+    <!-- END WARNING-->
+    
+    <script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js?v=222"></script>
+    
+    <script type="text/javascript">var $=fp_utils.$,addClass=fp_utils.addClass,removeClass=fp_utils.removeClass,toggleClass=fp_utils.toggleClass,g_timeouts={},ACTIVE="active";function addOriginAnimations(e,t){e.length&&e.forEach(function(e){console.log(e),e.classList.remove("animate2"),g_timeouts.origin=setTimeout(function(){console.warn("hide-"+t),addClass(e,"hide-"+t),e.classList.remove("animate")},100)})}function addDestinyAnimations(e,t){var n="up"===t||"down"===t?"hide-down hide-up":"hide-left hide-right";e&&(addClass(e,ACTIVE),addClass(e,"animate"),removeClass(e,n),g_timeouts.destination=setTimeout(function(){addClass(e,"animate2")},1e3))}new fullpage("#fullpage",{anchors:["firstPage","secondPage","3rdPage","4thpage"],menu:"#menu",navigation:!0,slidesNavigation:!0,animateAnchor:!1,cards:!0,loopHorizontal:!1,cardsOptions:{fadeContent:!0,fadeBackground:!0},cardsKey:"YWx2YXJvdHJpZ28uY29tX0E2MFkyRnlaSE09cmI2",touchWrapper:document,scrollingSpeed:1e3,afterLoad:function(e,t,n){addClass(t,"animate")},onLeave:function(e,t,n){clearTimeout(g_timeouts.destination);var i=$(".preview-extensions-menu")[0];if(toggleClass(i,ACTIVE,0<t.index),removeClass(document.body,"fp-moving-right fp-moving-left fp-moving-down fp-moving-up"),n&&(addClass(document.body,"fp-moving-"+n),removeClass(document.body,"fp-moving-horizontally"),addClass(document.body,"fp-moving-vertically")),-1==["right","left"].indexOf(n)){var a=$('.active[data-section="'+(t.index+1)+'"]')[0];addDestinyAnimations(a=a||1<window.location.hash.split("/").length?a:$('[data-section="'+(t.index+1)+'"]')[0],n),addOriginAnimations($('.active[data-section="'+(e.index+1)+'"]'),n)}},onSlideLeave:function(e,t,n,i){removeClass(document.body,"fp-moving-right fp-moving-left fp-moving-down fp-moving-up"),i&&(addClass(document.body,"fp-moving-"+i),removeClass(document.body,"fp-moving-vertically"),addClass(document.body,"fp-moving-horizontally")),addDestinyAnimations($('.trainers[data-section="'+(e.index+1)+'"][data-slide="'+(n.index+1)+'"]')[0],i);var a=$('.trainers[data-section="'+(e.index+1)+'"][data-slide="'+(t.index+1)+'"]');removeClass(a,ACTIVE),addOriginAnimations(a,i)}}),function(){window.addEventListener("load",t),$("#turnOn")[0].addEventListener("click",l),$("#turnOff")[0].addEventListener("click",d),$(".arrow-down")[0].addEventListener("click",fullpage_api.moveSectionDown),$("#settings")[0].addEventListener("click",a),$(".slider-control-next").forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),fullpage_api.moveSlideRight()})}),$(".slider-control-prev").forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),fullpage_api.moveSlideLeft()})}),["click","touchstart"].forEach(function(e){document.addEventListener(e,i)}),$('[data-option="perspective"]')[0].addEventListener("input",c),$("#examples li").forEach(function(e){e.addEventListener("click",s)}),$("[data-option]").forEach(function(e){e.addEventListener("change",o)});var e=$(".perspective-value")[0],n=$(".settings-actions")[0];function t(){addClass(document.body,"loadBg")}function i(e){var t=e.target;fp_utils.closest(t,".settings-actions")||fp_utils.closest(t,"#settings")||removeClass(n,ACTIVE)}function a(){n.classList.toggle(ACTIVE)}function o(){fullpage_api.cards.setOption(this.getAttribute("data-option"),"range"!==this.type?this.checked:this.value)}function s(){if(!fp_utils.hasClass(this,ACTIVE)){removeClass($("#examples li.active")[0],ACTIVE),addClass(this,ACTIVE);var e=this.getAttribute("data-type");removeClass(document.body,"d-colors d-bg"),"colors"===e&&addClass(document.body,"d-colors"),"backgrounds"===e&&addClass(document.body,"d-bg")}}function d(){removeClass($("#turnOn")[0],ACTIVE),addClass(this,ACTIVE),fullpage_api.cards.destroy(),$(".only-if-active").forEach(function(e){e.style.display="none"})}function l(){removeClass($("#turnOff")[0],ACTIVE),addClass(this,ACTIVE),fullpage_api.cards.init(),$(".only-if-active").forEach(function(e){e.style.display="block"})}function c(){e.innerHTML=this.value}}();</script>
+    
+    <!-- Google anlytics (Do not copy this!!)-->
+    <script>
+        window.addEventListener('load', onLoad);
+    
+        /* Google Analytics (Do not copy this!!)*/
+        function onLoad(){
+            /* Google Analytics (Do not copy this!!)*/
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+            ga('create', 'UA-94005074-1', 'auto');
+            ga('send', 'pageview');
+        }
+    
+    </script>
+    
+    
+    
+    <script type="text/javascript">
+                    var __inScopeForCCPA = false;
+            function __uspapi(command, version, callback) {
+                var response = null;
+                var successs = false;
+                if (command === "getUSPData" && version === 1) {
+                    var uspString = "1"; // Version
+                    if (__inScopeForCCPA) {
+                        uspString += "Y"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+                        var result;
+                        var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+                        if (consentCookie === "nonconsent") {
+                            uspString += "Y";
+                        }
+                        else {
+                            uspString += "N";
+                        }
+                        uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+                    }
+                    else {
+                        uspString += "---";
+                    }
+                    response = {
+                        uspString: uspString,
+                        version: 1
+                    };
+                    success = true;
+                }
+                return callback(response, success);
+            };
+            function __receiveUspapiMessage(event) {
+                if (event.data.hasOwnProperty('__uspapiCall')) {
+                    __uspapi('getUSPData', 1, function(uspData, success) {
+                        event.source.postMessage({
+                            __uspapiReturn: {
+                                returnValue: uspData,
+                                success: success,
+                                callId: event.data.__uspapiCall.callId
+                            }
+                        },
+                        event.origin);
+                    });
+                }
+                return null;
+            };
+            window.addEventListener("message", __receiveUspapiMessage, false);
+    </script>
+    <script type="text/javascript" data-cfasync="false">!function(){var e=function(e,t){for(var r=0;r<t.length;r++){var n=t[r];if(0==n.complete||void 0!==n.readyState&&n.readyState<4){var o=n.getAttribute("src")||n.currentSrc;void 0!==n.readyState&&0==n.readyState?n.addEventListener("loadstart",(function(e){var t=e.currentTarget.getAttribute("src")||e.currentSrc;window.ezorqs(e,t)})):(o=n.getAttribute("src")||n.currentSrc,window.ezorqs(n,o)),n.addEventListener("load",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("loadeddata",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("error",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)}))}}};function t(e){for(var t=0;t<document.styleSheets.length;t++)if(document.styleSheets[t].href==e)return!0;return!1}__ez_addAllListeners=function(){e(0,document.querySelectorAll("img")),e(0,document.querySelectorAll("video")),e(0,document.querySelectorAll("audio")),function(e){for(var r=0;r<e.length;r++){var n=e[r];if(("preload"==n.getAttribute("rel")||"stylesheet"==n.getAttribute("rel"))&&null!=n.getAttribute("href")&&t(n.getAttribute("href"))){window.ezorqs(n,n.getAttribute("href"));var o=document.createElement("img");o.onerror=function(e){void 0!==e.path&&void 0!==e.path[0].currentSrc?window.ezorqe(n,e.path[0].currentSrc):void 0!==e.srcElement&&void 0!==e.srcElement.href&&window.ezorqe(n,e.srcElement.href)},o.src=n.getAttribute("href")}}}(document.querySelectorAll("link")),void 0!==window.__ez.ssaf&&window.__ez.ssaf.indexOf(16)>-1&&void 0!==window.__ez.sshsdef&&!1===window.__ez.sshsdef&&Element.prototype.addEventListener&&("function"==typeof window.onload&&(window.addEventListener("load",window.onload),window.onload=null),"function"==typeof document.onload&&(document.addEventListener.addEventListener("load",document.onload),document.onload=null))},__ez.queue.addFunc("__ez_addAllListeners","__ez_addAllListeners",null,!1,["/detroitchicago/tulsa.js"],!0,!0,!0,!0)}();</script>
+    <script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+            var setCookie = function( name, content, expiry ) {
+                return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+            };
+            var ffid = 1;
+            var oh = window.screen.height;
+            var ow = window.screen.width;
+            var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+            var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+            var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+            var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+            setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+            setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+        })();</script><script type='text/javascript' style='display:none;' async>
+    </script>
+    </body></html>
